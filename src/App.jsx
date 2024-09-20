@@ -5,8 +5,8 @@ function App() {
   
   return (
     <>
-      <div>
-        
+      <div className='text-5xl'>
+        <h1>React Crash Course</h1> 
       </div>
     </>
   )
