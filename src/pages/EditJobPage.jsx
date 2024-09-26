@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useParams, useLoaderData, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
+
+
 const EditJobPage = ({ updateJobSubmit }) => {
     const job = useLoaderData();
     const [title, setTitle] = useState(job.title);
@@ -49,25 +51,10 @@ const EditJobPage = ({ updateJobSubmit }) => {
             <div className='container m-auto max-w-2xl py-24'>
                 <div className='bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0'>
                     <form onSubmit={submitForm}>
-                        <h2 className='text-3xl text-center font-semibold mb-6'>
-                            Update Job
-                        </h2>
-
+                        <h2 className='text-3xl text-center font-semibold mb-6'> Update Job </h2>
                         <div className='mb-4'>
-                            <label
-                                htmlFor='type'
-                                className='block text-gray-700 font-bold mb-2'
-                            >
-                                Job Type
-                            </label>
-                            <select
-                                id='type'
-                                name='type'
-                                className='border rounded w-full py-2 px-3'
-                                required
-                                value={type}
-                                onChange={(e) => setType(e.target.value)}
-                            >
+                            <label htmlFor='type' className='block text-gray-700 font-bold mb-2' > Job Type </label>
+                            <select id='type' name='type' className='border rounded w-full py-2 px-3' required value={type} onChange={(e) => setType(e.target.value)} >
                                 <option value='Full-Time'>Full-Time</option>
                                 <option value='Part-Time'>Part-Time</option>
                                 <option value='Remote'>Remote</option>
@@ -76,36 +63,12 @@ const EditJobPage = ({ updateJobSubmit }) => {
                         </div>
 
                         <div className='mb-4'>
-                            <label className='block text-gray-700 font-bold mb-2'>
-                                Job Listing Name
-                            </label>
-                            <input
-                                type='text'
-                                id='title'
-                                name='title'
-                                className='border rounded w-full py-2 px-3 mb-2'
-                                placeholder='eg. Beautiful Apartment In Miami'
-                                required
-                                value={title}
-                                onChange={(e) => setTitle(e.target.value)}
-                            />
+                            <label className='block text-gray-700 font-bold mb-2'> Job Listing Name </label>
+                            <input type='text' id='title' name='title' className='border rounded w-full py-2 px-3 mb-2' placeholder='eg. Beautiful Apartment In Miami' required value={title} onChange={(e) => setTitle(e.target.value)} />
                         </div>
                         <div className='mb-4'>
-                            <label
-                                htmlFor='description'
-                                className='block text-gray-700 font-bold mb-2'
-                            >
-                                Description
-                            </label>
-                            <textarea
-                                id='description'
-                                name='description'
-                                className='border rounded w-full py-2 px-3'
-                                rows='4'
-                                placeholder='Add any job duties, expectations, requirements, etc'
-                                value={description}
-                                onChange={(e) => setDescription(e.target.value)}
-                            ></textarea>
+                            <label htmlFor='description' className='block text-gray-700 font-bold mb-2' > Description </label>
+                            <textarea id='description' name='description' className='border rounded w-full py-2 px-3' rows='4' placeholder='Add any job duties, expectations, requirements, etc' value={description} onChange={(e) => setDescription(e.target.value)} ></textarea>
                         </div>
 
                         <div className='mb-4'>
